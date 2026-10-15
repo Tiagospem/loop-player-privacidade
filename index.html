@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Política de privacidade da extensão Loop Player para Google Chrome. Atualizada em 14 de outubro de 2026.">
+<title>Política de privacidade · Loop Player</title>
+<!-- Generated from privacy-policy.md by scripts/privacy-page.mjs. Edit the Markdown, then run npm run store:privacy. -->
+<style>
+  :root { color-scheme: light dark; --text: #1d1f1a; --muted: #5d6356; --line: #dde1d6; --bg: #fbfcf8; --link: #3d5a0c; --code: #eef1e8; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f2f4ee; --muted: #aab1a2; --line: #2b3027; --bg: #0d0f0c; --link: #c5f36b; --code: #1c1f1a; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 48px 16px 64px; color: var(--text); background: var(--bg); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  article + article { margin-top: 24px; }
+  h1 { margin: 0 0 4px; font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; }
+  h2 { margin: 40px 0 8px; font-size: 22px; line-height: 1.3; }
+  h3 { margin: 28px 0 4px; font-size: 18px; }
+  h1 + p { margin-top: 0; color: var(--muted); }
+  p, ul { margin: 12px 0; }
+  ul { padding-left: 22px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--link); text-underline-offset: 3px; }
+  code { padding: 1px 5px; border-radius: 5px; background: var(--code); font: 0.88em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  hr { margin: 56px 0; border: 0; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<main>
+<article lang="pt-BR">
+<h1>Política de privacidade do Loop Player</h1>
+<p>Última atualização: 14 de outubro de 2026</p>
+<p>O Loop Player é uma extensão do Google Chrome para praticar música com vídeos do YouTube. Ela encontra vídeos na página aberta, guarda uma biblioteca de estudo e repete trechos em loop A → B, com velocidade e pausa ajustáveis. Também traz afinador, metrônomo e o Braço, para estudar escalas, acordes e intervalos e desenhar diagramas.</p>
+<p>Esta política explica quais dados a extensão usa, onde eles ficam e o que ela nunca faz. <a href="#privacy-policy-english">English version below</a>.</p>
+<h2>Resumo</h2>
+<ul>
+  <li>Tudo o que a extensão guarda fica no seu navegador, no seu perfil do Chrome.</li>
+  <li>Não existe servidor do Loop Player, conta ou login. A extensão não coleta, não envia e não vende dados, e não tem análise de uso nem anúncios.</li>
+  <li>O áudio do microfone, usado pelo afinador, é processado no próprio computador. Ele nunca é gravado, salvo ou enviado.</li>
+  <li>As únicas conexões de rede são as normais ao YouTube: miniaturas carregadas de <code>i.ytimg.com</code> e os vídeos que você abre ou reproduz.</li>
+</ul>
+<h2>Dados que a extensão usa e onde ficam</h2>
+<h3>Biblioteca e preferências</h3>
+<p>Quando você salva um vídeo, a extensão guarda:</p>
+<ul>
+  <li>o identificador (ID) e o título do vídeo no YouTube;</li>
+  <li>o endereço e o título da página onde o vídeo foi encontrado, as &quot;origens&quot;;</li>
+  <li>os trechos A/B, com o zoom e o enquadramento de cada um, a velocidade, a pausa entre repetições, o espelhamento e as anotações que você escreveu;</li>
+  <li>as datas em que o vídeo foi salvo e alterado.</li>
+</ul>
+<p>A extensão também guarda:</p>
+<ul>
+  <li>as suas preferências: atalhos na página, posição e estado do controle flutuante, ajustes das ferramentas, tema, cor de destaque e idioma;</li>
+  <li>os <strong>diagramas do Braço</strong> que você salva (nome, notas marcadas, linhas, tom e escala), o desenho em edição e a última visão do Braço;</li>
+  <li>a <strong>lixeira</strong>: vídeos excluídos, com trechos e anotações, por 30 dias;</li>
+  <li>até 3 <strong>pontos de restauração</strong>: cópias da biblioteca, dos diagramas, da lixeira e das preferências feitas antes de cada importação ou restauração, para desfazê-las;</li>
+  <li>o estado do backup automático: nome da pasta, horário do último backup e o último erro.</li>
+</ul>
+<p>Esses dados ficam no armazenamento local da extensão neste perfil do Chrome (<code>chrome.storage.local</code>). Não são sincronizados com a sua conta do Google nem com outros computadores. Ficam ali até você excluir o vídeo, esvaziar a lixeira ou remover a extensão.</p>
+<h3>Estado temporário da prática</h3>
+<p>Enquanto você pratica, a extensão mantém dados temporários para reconectar o player se o Chrome reiniciar o processo da extensão:</p>
+<ul>
+  <li>o número da aba e do quadro (iframe) onde está o vídeo;</li>
+  <li>a posição de reprodução e o trecho em uso;</li>
+  <li>os endereços das páginas abertas em que foram encontrados vídeos.</li>
+</ul>
+<p>Esses dados ficam na memória do Chrome (<code>chrome.storage.session</code>). São descartados quando a aba é fechada ou quando o navegador é encerrado.</p>
+<h3>Leitura das páginas</h3>
+<p>Para listar os vídeos de uma página, a extensão roda um script nas páginas HTTP e HTTPS. Esse script procura links, iframes e players do YouTube. No vídeo que você escolhe praticar, ele controla o player: tocar, pausar, posição, velocidade e loop.</p>
+<p>O script lê apenas o necessário para isso: endereços de links e iframes, títulos e o estado do player. Ele não lê formulários, senhas nem cookies, e não envia o conteúdo das páginas para fora do navegador.</p>
+<p>Se você ativar <strong>Teclas na página da aula</strong>, a extensão reage a algumas teclas na aba em prática: Espaço, A, B, L, R, 1–9 e setas. Ela não registra o que você digita e ignora campos de texto.</p>
+<h3>Microfone: afinador e identificação de notas</h3>
+<p>O microfone só é usado quando você liga o afinador ou a identificação de notas. Nesse momento, o Chrome pede a sua permissão.</p>
+<p>O áudio é analisado dentro da própria extensão, no seu computador, para estimar a nota e a afinação. O áudio nunca é gravado, salvo ou enviado a ninguém. Só a nota detectada aparece na tela.</p>
+<p>Ao desligar a ferramenta, a extensão libera o microfone. Para revogar a permissão, use as configurações de privacidade do Chrome. O metrônomo apenas gera som e não usa o microfone.</p>
+<h3>Backup da biblioteca</h3>
+<p><strong>Exportar biblioteca</strong> cria um arquivo JSON no seu computador com a biblioteca e as preferências. O arquivo vai para onde você salvar e não é enviado a lugar nenhum. <strong>Importar backup</strong> lê, no próprio navegador, o arquivo que você escolher.</p>
+<p>O <strong>backup automático</strong> só funciona se você escolher uma pasta no computador. A partir daí, a extensão grava nela o mesmo arquivo de backup a cada mudança, mais uma cópia por dia dos últimos 7 dias. A extensão grava e lê <strong>apenas</strong> nessa pasta, com a permissão que você dá ao Chrome, e não envia os arquivos a lugar nenhum. A referência à pasta fica no armazenamento da extensão (IndexedDB) neste perfil do Chrome.</p>
+<p>Se a pasta for sincronizada por um serviço como iCloud Drive, Google Drive ou Dropbox, é esse serviço, escolhido e configurado por você, que leva a cópia para a nuvem, conforme a política dele.</p>
+<p>O backup contém os endereços das páginas de origem e as suas anotações. Guarde o arquivo e a pasta com o mesmo cuidado que teria com esses dados.</p>
+<h3>Compartilhar loops</h3>
+<p>O código de compartilhamento e o arquivo <code>.loop</code> são gerados no próprio navegador. Eles levam:</p>
+<ul>
+  <li>o ID do vídeo;</li>
+  <li>os trechos, com nomes, zoom e foco;</li>
+  <li>a velocidade e a pausa;</li>
+  <li>no arquivo, também o título do vídeo.</li>
+</ul>
+<p>Nunca levam anotações, páginas de origem nem datas. O código vai para a área de transferência e o arquivo para onde você salvar. Eles só saem do computador se você mesmo os enviar a alguém.</p>
+<p>Ao receber um código ou arquivo, a extensão o lê no navegador e só grava na biblioteca depois da sua confirmação.</p>
+<h3>Compartilhar diagramas do Braço</h3>
+<p>O código de diagrama (<code>LPD1</code>), o arquivo <code>.loop</code> de diagramas e a imagem PNG também são gerados no próprio navegador. Eles levam só o desenho: nome, notas marcadas com cor e rótulo, linhas, tom, escala de fundo, afinação e trastes. Só saem do computador se você mesmo os enviar a alguém. Ao receber um código ou arquivo, a extensão mostra o que vai entrar e só grava depois da sua confirmação.</p>
+<h3>Diagnóstico</h3>
+<p>O botão <strong>Gerar diagnóstico</strong> cria um texto local com:</p>
+<ul>
+  <li>a versão da extensão;</li>
+  <li>os números de aba e de quadro;</li>
+  <li>o ID do vídeo e as respostas do player.</li>
+</ul>
+<p>Esse texto não inclui endereços de páginas. Ele só aparece na tela e só sai do computador se você mesmo copiar e compartilhar.</p>
+<h2>Conexões de rede</h2>
+<p>O Loop Player não tem servidor e não envia dados ao desenvolvedor nem a terceiros.</p>
+<ul>
+  <li><strong>Miniaturas.</strong> As capas dos vídeos são carregadas de <code>https://i.ytimg.com</code>, o servidor de imagens do YouTube. O endereço inclui o ID do vídeo e a requisição é feita sem informar a página de origem. Como em qualquer carregamento de imagem, o YouTube recebe dados técnicos da conexão, como o endereço IP e o navegador.</li>
+  <li><strong>Vídeos.</strong> Abrir um vídeo no YouTube ou reproduzi-lo num player incorporado faz as requisições normais ao YouTube. Essas requisições seguem a <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>.</li>
+  <li><strong>O que não existe.</strong> A extensão não usa análise de uso, rastreamento, anúncios nem código remoto.</li>
+</ul>
+<h2>O que não fazemos</h2>
+<ul>
+  <li>Não vendemos, alugamos nem compartilhamos dados.</li>
+  <li>Não usamos dados para publicidade, criação de perfis ou avaliação de crédito.</li>
+  <li>Não temos acesso à sua biblioteca, às suas anotações nem ao áudio do microfone.</li>
+</ul>
+<p>O uso de informações pelo Loop Player segue a Política de Dados do Usuário da Chrome Web Store, incluindo os requisitos de Uso Limitado.</p>
+<h2>Como apagar seus dados</h2>
+<ul>
+  <li><strong>Um vídeo:</strong> na <strong>Biblioteca</strong>, use o ícone de lixeira.</li>
+  <li><strong>Lixeira:</strong> em <strong>Ajustes → Lixeira</strong>, use <strong>Esvaziar lixeira</strong>. Itens com mais de 30 dias somem sozinhos.</li>
+  <li><strong>Tudo:</strong> remova a extensão em <code>chrome://extensions</code>. O Chrome apaga a biblioteca, a lixeira, os pontos de restauração, as preferências e o estado temporário.</li>
+  <li><strong>Microfone:</strong> revogue a permissão nas configurações de privacidade do Chrome.</li>
+  <li><strong>Backups:</strong> os arquivos exportados e os da pasta de backup são seus. Apague-os como qualquer outro arquivo. Para parar o backup automático, use <strong>Ajustes → Backup → Desligar</strong>.</li>
+</ul>
+<h2>Alterações nesta política</h2>
+<p>Mudanças nesta política são publicadas neste endereço, com nova data de atualização. Se a extensão passar a tratar dados de outra forma, a política e a página da extensão na Chrome Web Store serão atualizadas antes da nova versão.</p>
+<h2>Contato</h2>
+<p>Tiago Padilha · tiagospem@gmail.com</p>
+<p>O Loop Player é um projeto independente, sem vínculo com o YouTube ou o Google. YouTube é marca registrada da Google LLC.</p>
+<hr>
+</article>
+<article id="privacy-policy-english" lang="en">
+<h1>Loop Player privacy policy (English)</h1>
+<p>Last updated: October 14, 2026</p>
+<p>Loop Player is a Google Chrome extension for practicing music with YouTube videos. It finds videos on the open page, keeps a practice library and repeats sections in an A → B loop with adjustable speed and pause. It also includes a tuner, a metronome and a fretboard for studying scales, chords and intervals and drawing diagrams. The interface is available in English, Portuguese and Spanish.</p>
+<h2>Summary</h2>
+<ul>
+  <li>Everything the extension stores stays in your browser, in your Chrome profile.</li>
+  <li>There is no Loop Player server, account or sign-in. The extension does not collect, transmit or sell data, and it has no analytics or ads.</li>
+  <li>Microphone audio, used by the tuner, is processed on your computer. It is never recorded, stored or sent anywhere.</li>
+  <li>The only network connections are the regular ones to YouTube: thumbnails loaded from <code>i.ytimg.com</code> and the videos you open or play.</li>
+</ul>
+<h2>Data the extension uses and where it stays</h2>
+<h3>Library and preferences</h3>
+<p>When you save a video, the extension stores:</p>
+<ul>
+  <li>the YouTube video ID and title;</li>
+  <li>the address and title of the page where the video was found (its &quot;sources&quot;);</li>
+  <li>your A/B sections with each one's zoom and framing, speed, pause between repetitions, mirroring and notes;</li>
+  <li>the dates the video was saved and changed.</li>
+</ul>
+<p>The extension also stores:</p>
+<ul>
+  <li>your preferences: page shortcuts, floating controller position and state, tool settings, theme, accent color and language;</li>
+  <li>the <strong>fretboard diagrams</strong> you save (name, marked notes, lines, key and scale), the drawing in progress and the last fretboard view;</li>
+  <li>the <strong>trash</strong>: deleted videos, with their sections and notes, for 30 days;</li>
+  <li>up to 3 <strong>restore points</strong>: copies of the library, diagrams, trash and preferences made before each import or restore, so it can be undone;</li>
+  <li>the automatic backup status: folder name, time of the last backup and the last error.</li>
+</ul>
+<p>This data lives in the extension's local storage in this Chrome profile (<code>chrome.storage.local</code>). It is not synced to your Google account or other computers. It stays there until you delete the video, empty the trash or remove the extension.</p>
+<h3>Temporary practice state</h3>
+<p>While you practice, the extension keeps temporary data so it can reconnect the player if Chrome restarts the extension process:</p>
+<ul>
+  <li>the tab and frame (iframe) number where the video is;</li>
+  <li>the playback position and the current section;</li>
+  <li>the addresses of open pages where videos were found.</li>
+</ul>
+<p>This data is kept in Chrome's memory (<code>chrome.storage.session</code>). It is discarded when the tab is closed or the browser exits.</p>
+<h3>Reading pages</h3>
+<p>To list the videos on a page, the extension runs a script on HTTP and HTTPS pages. The script looks for YouTube links, iframes and players. On the video you choose to practice, it controls the player: play, pause, position, speed and loop.</p>
+<p>It reads only what it needs for that: link and iframe addresses, titles and the player state. It does not read forms, passwords or cookies, and it does not send page content outside the browser.</p>
+<p>If you turn on page shortcuts, the extension responds to a few keys on the practiced tab: Space, A, B, L, R, 1–9 and the arrows. It does not record what you type and ignores text fields.</p>
+<h3>Microphone: tuner and note detection</h3>
+<p>The microphone is used only when you turn on the tuner or note detection. At that point, Chrome asks for your permission.</p>
+<p>The audio is analyzed inside the extension, on your computer, to estimate the note and the tuning. Audio is never recorded, stored or sent to anyone. Only the detected note appears on screen.</p>
+<p>When you turn the tool off, the extension releases the microphone. To revoke the permission, use Chrome's privacy settings. The metronome only generates sound and does not use the microphone.</p>
+<h3>Library backup</h3>
+<p>Exporting creates a JSON file on your computer with the library and preferences. The file goes wherever you save it and is not sent anywhere. Importing reads the file you choose, inside the browser.</p>
+<p>The <strong>automatic backup</strong> works only if you choose a folder on your computer. From then on, the extension writes the same backup file there after each change, plus one copy per day for the last 7 days. The extension writes and reads <strong>only</strong> in that folder, with the permission you give Chrome, and sends the files nowhere. The reference to the folder is kept in the extension's storage (IndexedDB) in this Chrome profile.</p>
+<p>If the folder is synced by a service such as iCloud Drive, Google Drive or Dropbox, that service, which you chose and set up, takes the copy to the cloud under its own policy.</p>
+<p>The backup contains your source page addresses and your notes. Keep the file and the folder as private as you would keep that data.</p>
+<h3>Sharing loops</h3>
+<p>The share code and the <code>.loop</code> file are generated inside the browser. They carry:</p>
+<ul>
+  <li>the video ID;</li>
+  <li>the sections, with names, zoom and focus;</li>
+  <li>the speed and the pause;</li>
+  <li>in the file, also the video title.</li>
+</ul>
+<p>They never carry notes, source pages or dates. The code goes to the clipboard and the file goes wherever you save it. They leave your computer only if you send them to someone yourself.</p>
+<p>When you receive a code or file, the extension reads it inside the browser and saves to the library only after you confirm.</p>
+<h3>Sharing fretboard diagrams</h3>
+<p>The diagram code (<code>LPD1</code>), the diagrams <code>.loop</code> file and the PNG image are also generated inside the browser. They carry only the drawing: name, marked notes with their color and label, lines, key, background scale, tuning and frets. They leave your computer only if you send them to someone yourself. When you receive a code or file, the extension shows what will be added and saves only after you confirm.</p>
+<h3>Diagnostics</h3>
+<p>The diagnostics button creates local text with:</p>
+<ul>
+  <li>the extension version;</li>
+  <li>tab and frame numbers;</li>
+  <li>the video ID and the player's responses.</li>
+</ul>
+<p>The text does not include page addresses. It is only shown to you and leaves your computer only if you copy and share it yourself.</p>
+<h2>Network connections</h2>
+<p>Loop Player has no server and sends no data to the developer or to third parties.</p>
+<ul>
+  <li><strong>Thumbnails.</strong> Video thumbnails are loaded from <code>https://i.ytimg.com</code>, YouTube's image server. The address includes the video ID, and the request is made without a referrer. As with any image load, YouTube receives technical connection data, such as your IP address and browser.</li>
+  <li><strong>Videos.</strong> Opening a video on YouTube or playing it in an embedded player makes the regular requests to YouTube. Those requests are governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+  <li><strong>What is not there.</strong> The extension uses no analytics, tracking, ads or remote code.</li>
+</ul>
+<h2>What we never do</h2>
+<ul>
+  <li>We do not sell, rent or share data.</li>
+  <li>We do not use data for advertising, profiling or creditworthiness.</li>
+  <li>We have no access to your library, your notes or your microphone audio.</li>
+</ul>
+<p>Loop Player's use of information complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+<h2>Deleting your data</h2>
+<ul>
+  <li><strong>One video:</strong> in the Library, use the trash icon.</li>
+  <li><strong>Trash:</strong> in Ajustes (Settings) → Lixeira (Trash), use “Esvaziar lixeira”. Items older than 30 days disappear on their own.</li>
+  <li><strong>Everything:</strong> remove the extension at <code>chrome://extensions</code>. Chrome deletes the library, trash, restore points, preferences and temporary state.</li>
+  <li><strong>Microphone:</strong> revoke the permission in Chrome's privacy settings.</li>
+  <li><strong>Backups:</strong> exported files and the files in the backup folder are yours. Delete them like any other file. To stop the automatic backup, use Ajustes → Backup → Desligar (Turn off).</li>
+</ul>
+<h2>Changes to this policy</h2>
+<p>Changes to this policy are published at this address with a new &quot;last updated&quot; date. If the extension starts handling data differently, this policy and the Chrome Web Store listing will be updated before that version is released.</p>
+<h2>Contact</h2>
+<p>Tiago Padilha · tiagospem@gmail.com</p>
+<p>Loop Player is an independent project, not affiliated with YouTube or Google. YouTube is a trademark of Google LLC.</p>
+</article>
+</main>
+</body>
+</html>
