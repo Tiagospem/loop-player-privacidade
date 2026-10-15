@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Instalar o Loop Player</title>
+<meta name="description" content="Baixe a versão mais recente do Loop Player e instale no Chrome, Edge ou Brave.">
+<style>
+  :root {
+    --bg: #0d0f0c; --surface: #161a14; --surface-2: #1d2219; --border: #2a3125; --text: #f2f5ee; --text-2: #b8bfb2; --text-3: #7d8577;
+    --accent: #c5f36b; --accent-ink: #12180a; --accent-soft: rgba(197, 243, 107, 0.12); --warn: #ffc857; --warn-soft: rgba(255, 200, 87, 0.12);
+    --radius: 14px; --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f4f5f0; --surface: #ffffff; --surface-2: #eef0e8; --border: #dfe3d7; --text: #161a14; --text-2: #4b5245; --text-3: #6f7768;
+      --accent: #5c8a00; --accent-ink: #ffffff; --accent-soft: rgba(92, 138, 0, 0.1); --warn: #a86b00; --warn-soft: rgba(168, 107, 0, 0.1); }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--text); background: var(--bg); font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  .page { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--text-2); font-size: 18px; letter-spacing: -0.03em; }
+  .brand b { color: var(--text); font-weight: 750; }
+  .mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; color: #12180a; background: #c5f36b; }
+  h1 { margin: 28px 0 8px; font-size: clamp(30px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.03em; }
+  h2 { margin: 48px 0 14px; font-size: 22px; letter-spacing: -0.01em; }
+  .lead { margin: 0; max-width: 640px; font-size: 18px; color: var(--text-2); }
+  .download { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin: 28px 0 0; padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+  .button { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 12px; color: var(--accent-ink); background: var(--accent); font-weight: 700; text-decoration: none; }
+  .button:hover { filter: brightness(1.06); }
+  .meta { display: grid; gap: 2px; font-size: 14px; color: var(--text-3); }
+  .meta strong { color: var(--text); font-weight: 650; }
+  .hash { font: 12px/1.4 var(--mono); word-break: break-all; }
+  .shot { display: block; width: 100%; max-width: 760px; height: auto; margin: 28px auto 0; border: 1px solid var(--border); border-radius: var(--radius); }
+  ol.steps { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  ol.steps > li { position: relative; padding: 16px 18px 16px 62px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); counter-increment: step; }
+  ol.steps > li::before { content: counter(step); position: absolute; left: 18px; top: 14px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: var(--accent-ink); background: var(--accent); font-weight: 750; }
+  ol.steps strong { color: var(--text); }
+  .step-title { display: block; font-weight: 700; }
+  .step-text { display: block; color: var(--text-2); }
+  code, kbd { padding: 1px 6px; border-radius: 6px; font: 0.92em var(--mono); background: var(--surface-2); }
+  .copy { margin-left: 6px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 6px; color: var(--text-2); background: transparent; font: 600 12px var(--font); cursor: pointer; }
+  .note { margin: 16px 0 0; padding: 14px 16px; border-radius: 12px; color: var(--text-2); background: var(--warn-soft); border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent); }
+  .note strong { color: var(--warn); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .card { padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text-2); }
+  .card-title { display: block; margin-bottom: 4px; color: var(--text); font-weight: 700; }
+  .card strong { color: var(--text); }
+  .changes { margin: 0; padding-left: 20px; color: var(--text-2); }
+  .changes li { margin: 4px 0; }
+  .changes strong { color: var(--text); }
+  dl.faq { display: grid; gap: 14px; margin: 0; }
+  dl.faq dt { font-weight: 700; }
+  dl.faq dd { margin: 4px 0 0; color: var(--text-2); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-3); }
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="brand"><span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.5 3.5v5h-5"/><path d="M10 9.2v5.6l4.6-2.8z" fill="currentColor" stroke="none"/></svg></span><span>loop<b>player</b></span></div>
+
+  <h1>Instale o Loop Player</h1>
+  <p class="lead">Pratique trechos de vídeos do YouTube em loop, sem sair da página da aula: velocidade, controle flutuante, afinador, metrônomo e o braço da guitarra com escalas, acordes e intervalos.</p>
+
+  <div class="download">
+    <a class="button" href="loop-player.zip" download>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+      Baixar a versão 0.6.0
+    </a>
+    <div class="meta">
+      <span><strong>Versão 0.6.0</strong> · 14 de outubro de 2026 · 279 KB</span>
+      <span>Para Chrome, Edge ou Brave no computador. Não funciona no celular.</span>
+      <span class="hash" title="Para conferir que o arquivo baixado está íntegro">SHA-256: dbcb42363f509772cd548d1baaa908a41a66dc93aa27e6d93eafb858be873dc6</span>
+    </div>
+  </div>
+
+  <img class="shot" src="img/controle.png" width="760" height="620" alt="O controle flutuante do Loop Player sobre a página de uma aula, com loop A → B, velocidade e pausa entre voltas">
+
+  <h2>Instalar (2 minutos)</h2>
+  <ol class="steps">
+    <li><span class="step-title">Baixe o arquivo</span><span class="step-text">Clique em <strong>Baixar a versão 0.6.0</strong>. Vem um arquivo <code>loop-player.zip</code>.</span></li>
+    <li><span class="step-title">Descompacte numa pasta fixa</span><span class="step-text">Dê dois cliques no zip (no Windows, botão direito → <strong>Extrair tudo</strong>). Mova a pasta <code>loop-player</code> para um lugar onde ela vai ficar, como <strong>Documentos</strong>. O navegador usa essa pasta enquanto a extensão estiver instalada: não apague nem mude de lugar.</span></li>
+    <li><span class="step-title">Abra a página de extensões</span><span class="step-text">Digite <code>chrome://extensions</code><button class="copy" type="button" data-copy="chrome://extensions">copiar</button> na barra de endereços. No Edge é <code>edge://extensions</code> e no Brave, <code>brave://extensions</code>.</span></li>
+    <li><span class="step-title">Ligue o Modo do desenvolvedor</span><span class="step-text">É a chave no canto superior direito da página (no Edge, no menu da esquerda).</span></li>
+    <li><span class="step-title">Carregue a pasta</span><span class="step-text">Clique em <strong>Carregar sem compactação</strong> e escolha a pasta <code>loop-player</code>, a que tem o arquivo <code>manifest.json</code> dentro. O navegador não aceita o zip direto.</span></li>
+    <li><span class="step-title">Fixe o ícone</span><span class="step-text">Clique no ícone de quebra-cabeça da barra do navegador e no alfinete ao lado de <strong>Loop Player</strong>. O ícone mostra quantos vídeos ele achou na página.</span></li>
+  </ol>
+
+  <h2>Primeiros passos</h2>
+  <div class="grid">
+    <div class="card"><span class="card-title">Praticar um trecho</span>Abra uma aula ou um vídeo do YouTube, clique no ícone do Loop Player e em <strong>Praticar aqui</strong>. Marque o A e o B e ajuste a velocidade no controle flutuante.</div>
+    <div class="card"><span class="card-title">Ferramentas</span>Na aba <strong>Ferramentas</strong> do ícone: afinador, identificação de notas, metrônomo e o <strong>Braço</strong>, que abre flutuante sobre a página.</div>
+    <div class="card"><span class="card-title">Idioma e tema</span>Em <strong>Ajustes</strong> (ícone de controles): português, inglês ou espanhol, tema claro ou escuro e a cor de destaque.</div>
+  </div>
+  <img class="shot" src="img/braco.png" width="760" height="600" alt="O Braço do Loop Player com a pentatônica de Lá menor e o campo harmônico, com o acorde Am marcado">
+
+  <h2>Atualizar para uma versão nova</h2>
+  <ol class="steps">
+    <li><span class="step-title">Baixe o zip novo</span><span class="step-text">Volte a esta página e baixe a versão mais recente.</span></li>
+    <li><span class="step-title">Troque o conteúdo da mesma pasta</span><span class="step-text">Apague os arquivos de dentro da pasta <code>loop-player</code> que você já usa e coloque no lugar os arquivos do zip novo. A pasta precisa continuar com o mesmo nome e no mesmo lugar.</span></li>
+    <li><span class="step-title">Recarregue</span><span class="step-text">Em <code>chrome://extensions</code>, clique no ícone de <strong>Recarregar</strong> (a seta circular) no cartão do Loop Player e atualize a página da aula.</span></li>
+  </ol>
+  <p class="note"><strong>Importante:</strong> a biblioteca, os trechos e os diagramas ficam guardados no navegador, ligados à pasta da extensão. Se você carregar a extensão de outra pasta, o navegador trata como outra instalação, com tudo vazio. Para levar seus dados, use <strong>Ajustes → Backup</strong>: exporte na instalação antiga e importe na nova, ou escolha uma pasta de backup automático.</p>
+
+  <h2>Novidades da versão 0.6.0</h2>
+  <ul class="changes">
+    <li><strong>Braço:</strong> teoria aplicada ao braço da guitarra, aberto em <strong>Ferramentas → Braço</strong> como janela flutuante sobre a página (com <strong>Destacar</strong> e <strong>Abrir completo</strong>).
+      <ul>
+        <li><strong>Explorar:</strong> 20 escalas, modos e arpejos com a grafia do tom; notas ou graus; shapes da pentatônica e de &quot;3 notas por corda&quot;; campo harmônico em tríades ou tétrades (cifra brasileira em pt-BR); intervalos a partir da tônica, com compostos (9, 11, 13); destro ou canhoto, corda aguda em cima ou embaixo, afinações e nome das cordas.</li>
+        <li><strong>Desenhar:</strong> marcações com 8 cores e rótulo (nota, grau, dedo ou texto), linhas, desfazer/refazer, tom que move o desenho, escala de fundo e região do braço.</li>
+        <li><strong>Diagramas</strong> salvos com nome (até 300), no backup e nos pontos de restauração, e compartilhados só entre usuários: código <code>LPD1</code>, arquivo <code>.loop</code> e imagem PNG.</li>
+      </ul></li>
+  </ul>
+
+  <h2>Problemas comuns</h2>
+  <dl class="faq">
+    <div><dt>"Manifest file is missing or unreadable" ao carregar</dt><dd>Você escolheu o zip ou uma pasta acima da certa. Escolha a pasta que tem o arquivo <code>manifest.json</code> logo dentro.</dd></div>
+    <div><dt>O navegador avisa sobre extensões do modo do desenvolvedor</dt><dd>É o aviso padrão para extensões instaladas fora da loja. Pode mantê-la ativa.</dd></div>
+    <div><dt>A extensão apareceu com erro ou sumiu</dt><dd>A pasta foi movida, renomeada ou apagada. Coloque-a de volta no lugar e clique em <strong>Recarregar</strong>.</dd></div>
+    <div><dt>O controle não aparece numa página</dt><dd>Atualize a página da aula depois de instalar ou recarregar a extensão. Páginas internas do navegador e a Chrome Web Store não permitem extensões.</dd></div>
+    <div><dt>O afinador não ouve nada</dt><dd>Na primeira vez, o navegador pede o microfone: permita. O áudio é processado no seu computador e nunca é gravado nem enviado.</dd></div>
+  </dl>
+
+  <footer>
+    Tudo o que o Loop Player guarda fica no seu navegador. <a href="../">Política de privacidade</a> · Dúvidas, ideias ou problemas: <a href="mailto:tiagospem@gmail.com">tiagospem@gmail.com</a>
+  </footer>
+</main>
+<script>
+  for (const button of document.querySelectorAll('[data-copy]')) {
+    button.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(button.dataset.copy); button.textContent = 'copiado'; } catch { button.textContent = 'selecione e copie'; }
+      setTimeout(() => { button.textContent = 'copiar'; }, 2000);
+    });
+  }
+</script>
+</body>
+</html>
