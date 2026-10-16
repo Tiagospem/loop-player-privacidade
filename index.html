@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Política de privacidade da extensão Loop Player para Google Chrome. Atualizada em 14 de outubro de 2026.">
+<meta name="description" content="Política de privacidade da extensão Loop Player para Google Chrome. Atualizada em 16 de outubro de 2026.">
 <title>Política de privacidade · Loop Player</title>
 <!-- Generated from privacy-policy.md by scripts/privacy-page.mjs. Edit the Markdown, then run npm run store:privacy. -->
 <style>
@@ -29,8 +29,8 @@
 <main>
 <article lang="pt-BR">
 <h1>Política de privacidade do Loop Player</h1>
-<p>Última atualização: 14 de outubro de 2026</p>
-<p>O Loop Player é uma extensão do Google Chrome para praticar música com vídeos do YouTube. Ela encontra vídeos na página aberta, guarda uma biblioteca de estudo e repete trechos em loop A → B, com velocidade e pausa ajustáveis. Também traz afinador, metrônomo e o Braço, para estudar escalas, acordes e intervalos e desenhar diagramas.</p>
+<p>Última atualização: 16 de outubro de 2026</p>
+<p>O Loop Player é uma extensão do Google Chrome para praticar música com vídeos do YouTube. Ela encontra vídeos na página aberta, guarda uma biblioteca de estudo e repete trechos em loop A → B, com velocidade e pausa ajustáveis. Também traz afinador, metrônomo e o Braço, para estudar escalas, acordes e intervalos, desenhar diagramas, escrever tablaturas e transcrever solos dos vídeos.</p>
 <p>Esta política explica quais dados a extensão usa, onde eles ficam e o que ela nunca faz. <a href="#privacy-policy-english">English version below</a>.</p>
 <h2>Resumo</h2>
 <ul>
@@ -52,8 +52,9 @@
 <ul>
   <li>as suas preferências: atalhos na página, posição e estado do controle flutuante, ajustes das ferramentas, tema, cor de destaque e idioma;</li>
   <li>os <strong>diagramas do Braço</strong> que você salva (nome, notas marcadas, linhas, tom e escala), o desenho em edição e a última visão do Braço;</li>
+  <li>as <strong>tablaturas</strong> que você escreve (nome, seções, notas, ritmo, técnicas, andamento e afinação) e as <strong>transcrições</strong>, que são tablaturas ligadas a um vídeo: guardam o identificador e o título do vídeo e o instante de cada nota;</li>
   <li>a <strong>lixeira</strong>: vídeos excluídos, com trechos e anotações, por 30 dias;</li>
-  <li>até 3 <strong>pontos de restauração</strong>: cópias da biblioteca, dos diagramas, da lixeira e das preferências feitas antes de cada importação ou restauração, para desfazê-las;</li>
+  <li>até 3 <strong>pontos de restauração</strong>: cópias da biblioteca, dos diagramas, das tablaturas, da lixeira e das preferências feitas antes de cada importação ou restauração, para desfazê-las;</li>
   <li>o estado do backup automático: nome da pasta, horário do último backup e o último erro.</li>
 </ul>
 <p>Esses dados ficam no armazenamento local da extensão neste perfil do Chrome (<code>chrome.storage.local</code>). Não são sincronizados com a sua conta do Google nem com outros computadores. Ficam ali até você excluir o vídeo, esvaziar a lixeira ou remover a extensão.</p>
@@ -90,6 +91,8 @@
 <p>Ao receber um código ou arquivo, a extensão o lê no navegador e só grava na biblioteca depois da sua confirmação.</p>
 <h3>Compartilhar diagramas do Braço</h3>
 <p>O código de diagrama (<code>LPD1</code>), o arquivo <code>.loop</code> de diagramas e a imagem PNG também são gerados no próprio navegador. Eles levam só o desenho: nome, notas marcadas com cor e rótulo, linhas, tom, escala de fundo, afinação e trastes. Só saem do computador se você mesmo os enviar a alguém. Ao receber um código ou arquivo, a extensão mostra o que vai entrar e só grava depois da sua confirmação.</p>
+<h3>Tablaturas e transcrições</h3>
+<p>O código de tablatura (<code>LPT1</code>/<code>LPT2</code>), o arquivo <code>.loop</code> de tablaturas, o texto e a imagem PNG são gerados no próprio navegador e levam só a tablatura: nome, seções, notas, ritmo, técnicas, andamento e afinação; uma transcrição leva também o identificador do vídeo e o instante de cada nota. Só saem do computador se você mesmo os enviar a alguém, e só entram depois da sua confirmação. O som de <strong>Tocar</strong> é sintetizado no seu computador, sem baixar nada. O modo <strong>Transcrever</strong> lê o tempo do vídeo e o controla (tocar, pausar, buscar, velocidade) do mesmo jeito que o controle flutuante, sem enviar nada a lugar nenhum.</p>
 <h3>Diagnóstico</h3>
 <p>O botão <strong>Gerar diagnóstico</strong> cria um texto local com:</p>
 <ul>
@@ -129,8 +132,8 @@
 </article>
 <article id="privacy-policy-english" lang="en">
 <h1>Loop Player privacy policy (English)</h1>
-<p>Last updated: October 14, 2026</p>
-<p>Loop Player is a Google Chrome extension for practicing music with YouTube videos. It finds videos on the open page, keeps a practice library and repeats sections in an A → B loop with adjustable speed and pause. It also includes a tuner, a metronome and a fretboard for studying scales, chords and intervals and drawing diagrams. The interface is available in English, Portuguese and Spanish.</p>
+<p>Last updated: October 16, 2026</p>
+<p>Loop Player is a Google Chrome extension for practicing music with YouTube videos. It finds videos on the open page, keeps a practice library and repeats sections in an A → B loop with adjustable speed and pause. It also includes a tuner, a metronome and a fretboard for studying scales, chords and intervals, drawing diagrams, writing tabs and transcribing solos from videos. The interface is available in English, Portuguese and Spanish.</p>
 <h2>Summary</h2>
 <ul>
   <li>Everything the extension stores stays in your browser, in your Chrome profile.</li>
@@ -151,8 +154,9 @@
 <ul>
   <li>your preferences: page shortcuts, floating controller position and state, tool settings, theme, accent color and language;</li>
   <li>the <strong>fretboard diagrams</strong> you save (name, marked notes, lines, key and scale), the drawing in progress and the last fretboard view;</li>
+  <li>the <strong>tabs</strong> you write (name, sections, notes, rhythm, techniques, tempo and tuning) and the <strong>transcriptions</strong>, which are tabs tied to a video: they keep the video's identifier and title and the time of each note;</li>
   <li>the <strong>trash</strong>: deleted videos, with their sections and notes, for 30 days;</li>
-  <li>up to 3 <strong>restore points</strong>: copies of the library, diagrams, trash and preferences made before each import or restore, so it can be undone;</li>
+  <li>up to 3 <strong>restore points</strong>: copies of the library, diagrams, tabs, trash and preferences made before each import or restore, so it can be undone;</li>
   <li>the automatic backup status: folder name, time of the last backup and the last error.</li>
 </ul>
 <p>This data lives in the extension's local storage in this Chrome profile (<code>chrome.storage.local</code>). It is not synced to your Google account or other computers. It stays there until you delete the video, empty the trash or remove the extension.</p>
@@ -189,6 +193,8 @@
 <p>When you receive a code or file, the extension reads it inside the browser and saves to the library only after you confirm.</p>
 <h3>Sharing fretboard diagrams</h3>
 <p>The diagram code (<code>LPD1</code>), the diagrams <code>.loop</code> file and the PNG image are also generated inside the browser. They carry only the drawing: name, marked notes with their color and label, lines, key, background scale, tuning and frets. They leave your computer only if you send them to someone yourself. When you receive a code or file, the extension shows what will be added and saves only after you confirm.</p>
+<h3>Tabs and transcriptions</h3>
+<p>The tab code (<code>LPT1</code>/<code>LPT2</code>), the tabs <code>.loop</code> file, the text and the PNG image are generated inside the browser and carry only the tab: name, sections, notes, rhythm, techniques, tempo and tuning; a transcription also carries the video's identifier and the time of each note. They leave your computer only if you send them to someone yourself, and they are added only after you confirm. The <strong>Play</strong> sound is synthesized on your computer, with nothing downloaded. The <strong>Transcribe</strong> mode reads the video's time and controls it (play, pause, seek, speed) the same way the floating controller does, without sending anything anywhere.</p>
 <h3>Diagnostics</h3>
 <p>The diagnostics button creates local text with:</p>
 <ul>
