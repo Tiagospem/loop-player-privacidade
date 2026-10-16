@@ -34,6 +34,18 @@
   .meta strong { color: var(--text); font-weight: 650; }
   .hash { font: 12px/1.4 var(--mono); word-break: break-all; }
   .shot { display: block; width: 100%; max-width: 760px; height: auto; margin: 28px auto 0; border: 1px solid var(--border); border-radius: var(--radius); }
+  .video { position: relative; margin: 28px 0 0; aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #000; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .features { display: grid; gap: 40px; }
+  .feature { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: center; gap: 28px; margin: 0; }
+  .feature:nth-child(even) { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+  .feature:nth-child(even) img { order: 2; }
+  .feature img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+  .feature.narrow img { max-width: 300px; justify-self: center; }
+  .feature h3 { margin: 0 0 6px; font-size: 19px; letter-spacing: -0.01em; }
+  .feature p { margin: 0; color: var(--text-2); }
+  .feature p + p { margin-top: 8px; }
+  @media (max-width: 680px) { .feature, .feature:nth-child(even) { grid-template-columns: 1fr; } .feature:nth-child(even) img { order: 0; } }
   ol.steps { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
   ol.steps > li { position: relative; padding: 16px 18px 16px 62px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); counter-increment: step; }
   ol.steps > li::before { content: counter(step); position: absolute; left: 18px; top: 14px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: var(--accent-ink); background: var(--accent); font-weight: 750; }
@@ -75,10 +87,11 @@
     <div class="meta">
       <span><strong>Versão 0.9.6</strong> · 16 de outubro de 2026 · 393 KB</span>
       <span>Para Chrome, Edge ou Brave no computador. Não funciona no celular.</span>
-      <span class="hash" title="Para conferir que o arquivo baixado está íntegro">SHA-256: 40b77c6cdba0c1e5484abcd70024ea77f277fe6e1b8e9118429da51b4c1750e2</span>
+      <span class="hash" title="Para conferir que o arquivo baixado está íntegro">SHA-256: d7d935fa1e73e0e5aebab2fa8bf3800bb90eb11b2561094cdfeb633e57e9a525</span>
     </div>
   </div>
 
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/gL-Z5eR5dXc?rel=0" title="Loop Player em 1 minuto e meio" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
   <img class="shot" src="img/controle.png" width="760" height="620" alt="O controle flutuante do Loop Player sobre a página de uma aula, com loop A → B, velocidade e pausa entre voltas">
 
   <h2>Instalar (2 minutos)</h2>
@@ -97,7 +110,26 @@
     <div class="card"><span class="card-title">Ferramentas</span>Na aba <strong>Ferramentas</strong> do ícone: afinador, identificação de notas, metrônomo e o <strong>Braço</strong>, que abre flutuante sobre a página.</div>
     <div class="card"><span class="card-title">Idioma e tema</span>Em <strong>Ajustes</strong> (ícone de controles): português, inglês ou espanhol, tema claro ou escuro e a cor de destaque.</div>
   </div>
-  <img class="shot" src="img/braco.png" width="760" height="600" alt="O Braço do Loop Player com a pentatônica de Lá menor e o campo harmônico, com o acorde Am marcado">
+
+  <h2>O que tem no Loop Player</h2>
+  <div class="features">
+    <figure class="feature">
+      <img src="img/braco.png" width="760" height="600" loading="lazy" alt="O Braço com a pentatônica de Lá menor e o campo harmônico, com o acorde Am marcado">
+      <figcaption><h3>Braço: escalas, acordes e intervalos</h3><p>Escalas e os cinco shapes da pentatônica, campo harmônico e intervalos, para destros e canhotos. Em <strong>Desenhar</strong>, marque notas e linhas e compartilhe seus diagramas.</p></figcaption>
+    </figure>
+    <figure class="feature">
+      <img src="img/tablatura.png" width="760" height="600" loading="lazy" alt="O modo Tablatura com um lick de blues em Lá: bends, hammer-ons, pull-offs, slide, vibrato e a linha de ritmo">
+      <figcaption><h3>Tablatura</h3><p>Escreva clicando no braço ou pelo teclado, com ritmo, técnicas (bend, hammer-on, slide, vibrato), acordes e seções. <strong>Tocar</strong> reproduz com som de violão de nylon, aço ou guitarra.</p><p>Comece pelos <strong>Exemplos</strong> do menu ⋯ e compartilhe por código, arquivo, texto ou imagem.</p></figcaption>
+    </figure>
+    <figure class="feature">
+      <img src="img/transcrever.png" width="1000" height="640" loading="lazy" alt="O modo Transcrever: a linha do tempo do vídeo com as seis cordas, notas marcadas e a linha que corre com o vídeo">
+      <figcaption><h3>Transcrever: tire um solo do vídeo</h3><p>A linha do tempo do vídeo com as seis cordas. Toque <strong>M</strong> em cada nota com o vídeo tocando (ou arraste a linha até o ponto), escreva as notas pelo braço e envie o resultado para a Tablatura.</p></figcaption>
+    </figure>
+    <figure class="feature narrow">
+      <img src="img/ferramentas.png" width="380" height="440" loading="lazy" alt="O afinador do Loop Player no visual animado, mostrando a nota Lá na quinta corda">
+      <figcaption><h3>Afinador, Notas e metrônomo</h3><p>O afinador e a identificação de notas usam a entrada de áudio do seu computador (o som é analisado aqui e nunca é gravado nem enviado). O metrônomo acompanha a velocidade do trecho.</p></figcaption>
+    </figure>
+  </div>
 
   <h2>Atualizar para uma versão nova</h2>
   <ol class="steps">
