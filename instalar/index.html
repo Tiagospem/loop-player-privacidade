@@ -51,6 +51,9 @@
   .changes { margin: 0; padding-left: 20px; color: var(--text-2); }
   .changes li { margin: 4px 0; }
   .changes strong { color: var(--text); }
+  .changes > li.version { margin-top: 14px; list-style: none; margin-left: -20px; }
+  .changes > li.version > strong { font-size: 1.05em; }
+  .changes > li.version > ul { padding-left: 20px; }
   dl.faq { display: grid; gap: 14px; margin: 0; }
   dl.faq dt { font-weight: 700; }
   dl.faq dd { margin: 4px 0 0; color: var(--text-2); }
@@ -62,17 +65,17 @@
   <div class="brand"><span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.5 3.5v5h-5"/><path d="M10 9.2v5.6l4.6-2.8z" fill="currentColor" stroke="none"/></svg></span><span>loop<b>player</b></span></div>
 
   <h1>Instale o Loop Player</h1>
-  <p class="lead">Pratique trechos de vídeos do YouTube em loop, sem sair da página da aula: velocidade, controle flutuante, afinador, metrônomo e o braço da guitarra com escalas, acordes e intervalos.</p>
+  <p class="lead">Pratique trechos de vídeos do YouTube em loop, sem sair da página da aula: velocidade, controle flutuante, afinador, metrônomo e o braço da guitarra com escalas, acordes, intervalos, tablaturas e o modo Transcrever, para tirar um solo do vídeo.</p>
 
   <div class="download">
     <a class="button" href="loop-player.zip" download>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-      Baixar a versão 0.6.0
+      Baixar a versão 0.9.6
     </a>
     <div class="meta">
-      <span><strong>Versão 0.6.0</strong> · 14 de outubro de 2026 · 279 KB</span>
+      <span><strong>Versão 0.9.6</strong> · 16 de outubro de 2026 · 393 KB</span>
       <span>Para Chrome, Edge ou Brave no computador. Não funciona no celular.</span>
-      <span class="hash" title="Para conferir que o arquivo baixado está íntegro">SHA-256: dbcb42363f509772cd548d1baaa908a41a66dc93aa27e6d93eafb858be873dc6</span>
+      <span class="hash" title="Para conferir que o arquivo baixado está íntegro">SHA-256: 40b77c6cdba0c1e5484abcd70024ea77f277fe6e1b8e9118429da51b4c1750e2</span>
     </div>
   </div>
 
@@ -80,7 +83,7 @@
 
   <h2>Instalar (2 minutos)</h2>
   <ol class="steps">
-    <li><span class="step-title">Baixe o arquivo</span><span class="step-text">Clique em <strong>Baixar a versão 0.6.0</strong>. Vem um arquivo <code>loop-player.zip</code>.</span></li>
+    <li><span class="step-title">Baixe o arquivo</span><span class="step-text">Clique em <strong>Baixar a versão 0.9.6</strong>. Vem um arquivo <code>loop-player.zip</code>.</span></li>
     <li><span class="step-title">Descompacte numa pasta fixa</span><span class="step-text">Dê dois cliques no zip (no Windows, botão direito → <strong>Extrair tudo</strong>). Mova a pasta <code>loop-player</code> para um lugar onde ela vai ficar, como <strong>Documentos</strong>. O navegador usa essa pasta enquanto a extensão estiver instalada: não apague nem mude de lugar.</span></li>
     <li><span class="step-title">Abra a página de extensões</span><span class="step-text">Digite <code>chrome://extensions</code><button class="copy" type="button" data-copy="chrome://extensions">copiar</button> na barra de endereços. No Edge é <code>edge://extensions</code> e no Brave, <code>brave://extensions</code>.</span></li>
     <li><span class="step-title">Ligue o Modo do desenvolvedor</span><span class="step-text">É a chave no canto superior direito da página (no Edge, no menu da esquerda).</span></li>
@@ -104,13 +107,66 @@
   </ol>
   <p class="note"><strong>Importante:</strong> a biblioteca, os trechos e os diagramas ficam guardados no navegador, ligados à pasta da extensão. Se você carregar a extensão de outra pasta, o navegador trata como outra instalação, com tudo vazio. Para levar seus dados, use <strong>Ajustes → Backup</strong>: exporte na instalação antiga e importe na nova, ou escolha uma pasta de backup automático.</p>
 
-  <h2>Novidades da versão 0.6.0</h2>
+  <h2>Novidades desde a versão 0.6.0</h2>
   <ul class="changes">
-    <li><strong>Braço:</strong> teoria aplicada ao braço da guitarra, aberto em <strong>Ferramentas → Braço</strong> como janela flutuante sobre a página (com <strong>Destacar</strong> e <strong>Abrir completo</strong>).
+    <li class="version"><strong>Versão 0.9.6</strong>
       <ul>
-        <li><strong>Explorar:</strong> 20 escalas, modos e arpejos com a grafia do tom; notas ou graus; shapes da pentatônica e de &quot;3 notas por corda&quot;; campo harmônico em tríades ou tétrades (cifra brasileira em pt-BR); intervalos a partir da tônica, com compostos (9, 11, 13); destro ou canhoto, corda aguda em cima ou embaixo, afinações e nome das cordas.</li>
-        <li><strong>Desenhar:</strong> marcações com 8 cores e rótulo (nota, grau, dedo ou texto), linhas, desfazer/refazer, tom que move o desenho, escala de fundo e região do braço.</li>
-        <li><strong>Diagramas</strong> salvos com nome (até 300), no backup e nos pontos de restauração, e compartilhados só entre usuários: código <code>LPD1</code>, arquivo <code>.loop</code> e imagem PNG.</li>
+        <li><strong>Transcrever:</strong> a linha do tempo pode ser arrastada pela bolinha na régua (ou arrastando na régua e no espaço vazio), com o vídeo acompanhando; solte e aperte M para marcar. A linha anda sem tremer e para na hora ao pausar.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.9.5</strong>
+      <ul>
+        <li><strong>Som do Tocar mais quente e cheio:</strong> ataque mais macio, agudos que morrem antes dos graves, corpo de violão com ressonâncias, ambiência leve, cordas abertas no estéreo e notas que continuam soando (arpejos e acordes soam juntos). Escolha de timbre: Nylon, Aço ou Elétrica.</li>
+        <li>O afinador e as Notas abrem no visual <strong>Animado</strong> por padrão (Clássico e Estroboscópico continuam em Ajustes).</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.9.4</strong>
+      <ul>
+        <li><strong>Braço flutuante sobre a aula:</strong> a folha em linha única passava a largura da janela e empurrava a barra de ferramentas, a visão geral e o braço para fora; agora fica presa à janela e rola para os lados.</li>
+        <li><strong>Menus do Braço</strong> (⋯ da Tablatura e da seção, ⋯ do Transcrever, cor do Desenhar) se medem depois de abrir e voltam para dentro da tela, mesmo em páginas que aumentam o zoom ou a largura do documento.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.9.3</strong>
+      <ul>
+        <li><strong>Folha da Tablatura numa linha só</strong>, desenhada em canvas: rola para os lados, com visão geral da seção, compassos numerados e sombreados, cursor e seleção com brilho, e a coluna tocando deslizando de uma para a outra. Não quebra mais numa segunda linha cortada pela altura da folha.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.9.2</strong>
+      <ul>
+        <li><strong>Tablatura → ⋯ → Exemplos…:</strong> doze tablaturas prontas para testar (melodias em domínio público e licks originais de blues, rock e metal), com ritmo, andamento, acordes e técnicas.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.9.1</strong>
+      <ul>
+        <li><strong>Visual novo do afinador e das Notas</strong> em Ajustes → Aparência: <strong>Animado</strong> (ponteiro com inércia, brilho e partículas quando afina), <strong>Clássico</strong> ou <strong>Estroboscópico</strong>.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.9.0</strong>
+      <ul>
+        <li><strong>Tablatura com ritmo:</strong> durações (semibreve a semicolcheia), pontuada, tercina, ligadura, compasso e andamento por seção, linha de ritmo e código <code>LPT2</code> (o <code>LPT1</code> continua para tablaturas sem ritmo).</li>
+        <li><strong>Tocar a tablatura</strong> com uma guitarra sintetizada, com o braço acompanhando; <strong>compartilhar</strong> como imagem PNG, transpor com prévia e <strong>modo leitura</strong>.</li>
+        <li><strong>Interface da Tablatura como editor:</strong> a folha no alto, uma barra de ferramentas única, seções em abas, braço recolhível e dicas em todos os botões.</li>
+        <li><strong>Modo Transcrever:</strong> a linha do tempo de um vídeo para tirar um solo, com controles do vídeo, marcas feitas com <code>M</code>, zoom e visão geral, acordes por coluna e <strong>Enviar para a Tablatura</strong>. Começa a praticar o vídeo da página sozinho, sem Praticar aqui.</li>
+        <li><strong>Trecho pode ficar desmarcado:</strong> clicar de novo no trecho escolhido (no painel ou no controle da página, ou a tecla do número) deixa nenhum trecho escolhido. Sem trecho, o vídeo toca livre, sem A/B na barra do player e sem loop; zoom e foco esperam um trecho (espelhar continua valendo).</li>
+        <li><strong>Trecho pode ficar desmarcado:</strong> clicar de novo no trecho escolhido (no painel ou no controle da página, ou a tecla do número) deixa nenhum trecho escolhido. Sem trecho, o vídeo toca livre, sem A/B na barra do player e sem loop; zoom e foco esperam um trecho (espelhar continua valendo).</li>
+        <li><strong>Vídeo novo começa sem trecho escolhido.</strong> <strong>Marcar A</strong>, <strong>Marcar B</strong> ou ligar o loop escolhem de novo o último trecho (num vídeo novo, o trecho 1). Loops salvos e códigos compartilhados de antes continuam com o trecho que tinham escolhido.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.8.2</strong>
+      <ul>
+        <li><strong>Braço → Desenhar mais enxuto:</strong> a cor virou um menu compacto (botão com a cor atual que abre as oito) e o rótulo passou a valer para o diagrama inteiro, com a chave <strong>Notas | Graus | Nada</strong>; saíram a opção Texto, o campo de texto e os dedos 1–4. Cada marcação agora é só posição e cor, e a barra não muda mais de tamanho ao trocar de opção.</li>
+        <li>Diagramas, códigos LPD1, arquivos <code>.loop</code> e backups das versões anteriores continuam abrindo: o diagrama fica com o rótulo que a maioria das marcações usava, e os textos (dedos, &quot;R&quot;) são deixados de lado. Os códigos novos continuam legíveis pela 0.8.1.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.8.1</strong>
+      <ul>
+        <li><strong>Excluir trecho</strong> no painel volta a funcionar: pede confirmação, remove o trecho escolhido (o seguinte ocupa o lugar; excluindo o último, o anterior fica escolhido) e mantém sempre pelo menos um trecho.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.8.0</strong>
+      <ul>
+        <li><strong>Braço → Tablatura:</strong> escrever tablatura clicando no braço ou pelo teclado, com técnicas (hammer-on, pull-off, slides, bend, vibrato, abafada), acordes, compassos, pausas e seções com nome; seleção, copiar e colar entre seções e tablaturas; desfazer/refazer.
+          <ul>
+            <li>Tablaturas (até 200) salvas pelo service worker, sincronizadas entre janelas, no backup e nos pontos de restauração.</li>
+            <li>Compartilhar a tablatura, a seção ou a seleção por código <code>LPT1</code>, arquivo <code>.loop</code> ou texto ASCII; importar códigos, arquivos e tablaturas em texto de sites de cifras.</li>
+          </ul></li>
+        <li><strong>Explorar → Todas as notas:</strong> os nomes de todas as notas do braço, com a escala em destaque.</li>
+      </ul></li>
+    <li class="version"><strong>Versão 0.7.0</strong>
+      <ul>
+        <li><strong>Trecho na barra do player:</strong> faixa do trecho ativo sobre a barra de progresso do YouTube, com alças A e B arrastáveis, régua de precisão e teclado.</li>
+        <li>Vídeo novo começa com o trecho do início ao fim e o loop desligado; segurar os botões de ajuste fino acelera o passo.</li>
       </ul></li>
   </ul>
 
